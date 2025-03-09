@@ -24,7 +24,7 @@ const SitecorePage = ({
     handleEditorFastRefresh();
 
   }, []);
-
+console.log('JP TEST', layoutData);
   if (notFound || !layoutData.sitecore.route) {
     // Shouldn't hit this (as long as 'notFound' is being returned below), but just to be safe
     return <NotFound />;
@@ -51,13 +51,14 @@ const SitecorePage = ({
         )}
       </SitecoreContext>
     </ComponentPropsContext>
+    
   );
 };
 
 // This function gets called at request time on server-side.
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const props = await sitecorePagePropsFactory.create(context);
-
+  console.log('JP TEST2', "Hola");
   return {
     props,
     notFound: props.notFound, // Returns custom 404 page with a status code of 404 when true

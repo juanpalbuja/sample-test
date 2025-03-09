@@ -21,6 +21,7 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 function App({ Component, pageProps }: AppProps<SitecorePageProps>): JSX.Element {
   const { dictionary, ...rest } = pageProps;
+  console.log('JP TEST3', "Hola");
 
   return (
     <>
