@@ -58,7 +58,7 @@ console.log('JP TEST', layoutData);
 // This function gets called at request time on server-side.
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const props = await sitecorePagePropsFactory.create(context);
-  console.log('JP TEST2', "Hola");
+  console.log('JP TEST2', "Hola2");
   return {
     props,
     notFound: props.notFound, // Returns custom 404 page with a status code of 404 when true
