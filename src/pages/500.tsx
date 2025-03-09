@@ -1,5 +1,13 @@
 import NotFound2 from 'src/NotFound2';
+import Head from 'next/head';
 
-const Custom404 = (): JSX.Element => <NotFound2 />;
+const Custom500 = (): JSX.Element => (
+    <>
+    <Head>
+      <title>Error JP</title>
+    </Head>
+    <NotFound2 />
+    </>
+);
 
-export default Custom404;
+export default Custom500;
